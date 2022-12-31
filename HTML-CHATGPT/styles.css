@@ -1,0 +1,144 @@
+/* Change the font and text color for the entire page */
+body {
+    font-family: sans-serif;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Add some padding and a border to the message form element */
+  #message-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flexbox;
+  }
+  
+  /* Style the label and textarea elements */
+  label,
+  textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 85%;
+  }
+  
+  /* Add some padding and a background color to the send button */
+  #send-button {
+    padding: 5px;
+    background-color: #00b8d4;
+    color: #fff;
+    border: #7f00d4;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Add some padding and a border to the response display element */
+  #response-display {
+    padding: 20px;
+    border: 2px solid #00b8d4;
+  }
+  
+  /* Make the select elements display in a row */
+  select {
+    flex: 1;
+  }
+  
+  /* Style the checkbox labels */
+  .reversed-card-label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Display the checkboxes and labels in a row */
+  .card-label-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Add some spacing between the checkbox and label */
+  .card-label-checkbox label {
+    margin-right: 10px;
+  }
+
+  /* Style the header column */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  /* Style the toggle button */
+  #menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  /* Style the menu container */
+  #menu {
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    width: 250px;
+    height: calc(100% - 50px);
+    background-color: #333;
+    color: #fff;
+    transition: left 0.5s;
+  }
+  
+  /* Style the menu items */
+  #menu a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #menu a:hover {
+    background-color: #444;
+  }
+
+  .threecardheader {
+    padding: 20px;
+  }
+  
+  /* Apply styles for small screens */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .reversed-card-label {
+      font-size: 14px;
+    }
+  }
+  
+  /* Apply styles for medium screens */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .reversed-card-label {
+      font-size: 16px;
+    }
+  }
+  
+  /* Apply styles for large screens */
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .reversed-card-label {
+      font-size: 18px;
+    }
+  }

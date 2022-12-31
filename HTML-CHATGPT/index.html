@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TarotAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons8-tarot-64.png">
+    <link rel="shortcut icon" href="icons8-tarot-64.png" type="image/x-icon">
+
+  </head>
+  <body>
+    <!-- Header column -->
+<div id="header">
+    <!-- Toggle button for the slide out menu -->
+    <button id="menu-toggle" onclick="toggleMenu()">Menu</button>
+    <!-- Menu container -->
+    <div id="menu">
+      <!-- Menu items -->
+      <h2 class="threecardheader">3-Card Reading Options</h2>
+      <a href="#">Select Cards</a>
+      <a href="#">Generate Reading</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  
+      
+    <h1>TarotAI</h1>
+    <div id="message-form">
+    <label id="card-label" for="message-input">Message:</label>
+    <textarea id="message-input" ></textarea>
+    <label for="tarot-card-1">Tarot Card1:</label>
+    <select id="tarot-card-1">
+    <option value="">---</option>
+    <option value="the-fool">The Fool</option>
+    <option value="the-magician">The Magician</option>
+    <option value="the-high-priestess">The High Priestess</option>
+    <option value="The Empress">The Empress</option>
+    <option value="The Emperor">The Emperor</option>
+    <option value="The Hierophant">The Hierophant</option>
+    <option value="The Lovers">The Lovers</option>
+    <option value="The Chariot">The Chariot</option>
+    <option value="Strength">Strength</option>
+    <option value="The Hermit">The Hermit</option>
+    <option value="The Wheel of Fortune ">The Wheel of Fortune </option>
+    <option value="Justice">Justice</option>
+    <option value="The Hanged Man">The Hanged Man</option>
+    <option value="Death">Death</option>
+    <option value="Temperance">Temperance</option>
+    <option value="The Devil">The Devil</option>
+    <option value="The Tower">The Tower</option>
+    <option value="The Star">The Star</option>
+    <option value="The Moon">The Moon</option>
+    <option value="The Sun">The Sun</option>
+    <option value="Judgement">Judgement</option>
+    <option value="The World">The World</option>
+    <option value="Ace of Wands">Ace of Wands</option>
+    <option value="Two of Wands">Two of Wands</option>
+    <option value="Three of Wands">Three of Wands</option>
+    <option value="Four of Wands">Four of Wands</option>
+    <option value="Five of Wands">Five of Wands</option>
+    <option value="Six of Wands">Six of Wands</option>
+    <option value="Seven of Wands">Seven of Wands</option>
+    <option value="Eight of Wands">Eight of Wands</option>
+    <option value="Nine of Wands">Nine of Wands</option>
+    <option value="Ten of Wands">Ten of Wands</option>
+    <option value="Page of Wands">Page of Wands</option>
+    <option value="Knight of Wands">Knight of Wands</option>
+    <option value="Queen of Wands">Queen of Wands</option>
+    <option value="King of Wands">King of Wands</option>
+    <option value="Ace of Cups">Ace of Cups</option>
+    <option value="Two of Cups">Two of Cups</option>
+    <option value="Three of Cups">Three of Cups</option>
+    <option value="Four of Cups">Four of Cups</option>
+    <option value="Five of Cups">Five of Cups</option>
+    <option value="Six of Cups">Six of Cups</option>
+    <option value="Seven of Cups">Seven of Cups</option>
+    <option value="Eight of Cups">Eight of Cups</option>
+    <option value="Nine of Cups">Nine of Cups</option>
+    <option value="Ten of Cups">Ten of Cups</option>
+    <option value="Page of Cups">Page of Cups</option>
+    <option value="Knight of Cups">Knight of Cups</option>
+    <option value="Queen of Cups">Queen of Cups</option>
+    <option value="King of Cups">King of Cups</option>
+    <option value="Ace of Swords">Ace of Swords</option>
+    <option value="Two of Swords">Two of Swords</option>
+    <option value="Three of Swords">Three of Swords</option>
+    <option value="Four of Swords">Four of Swords</option>
+    <option value="Five of Swords">Five of Swords</option>
+    <option value="Six of Swords">Six of Swords</option>
+    <option value="Seven of Swords">Seven of Swords</option>
+    <option value="Eight of Swords">Eight of Swords</option>
+    <option value="Nine of Swords">Nine of Swords</option>
+    <option value="Ten of Swords">Ten of Swords</option>
+    <option value="Page of Swords">Page of Swords</option>
+    <option value="Knight of Swords">Knight of Swords</option>
+    <option value="Queen of Swords">Queen of Swords</option>
+    <option value="King of Swords">King of Swords</option>
+    <option value="Ace of Pentacles">Ace of Pentacles</option>
+    <option value="Two of Pentacles">Two of Pentacles</option>
+    <option value="Three of Pentacles">Three of Pentacles</option>
+    <option value="Four of Pentacles">Four of Pentacles</option>
+    <option value="Five of Pentacles">Five of Pentacles</option>
+    <option value="Six of Pentacles">Six of Pentacles</option>
+    <option value="Seven of Pentacles">Seven of Pentacles</option>
+    <option value="Eight of Pentacles">Eight of Pentacles</option>
+    <option value="Nine of Pentacles">Nine of Pentacles</option>
+    <option value="Ten of Pentacles">Ten of Pentacles</option>
+    <option value="Page of Pentacles">Page of Pentacles</option>
+    <option value="Knight of Pentacles">Knight of Pentacles</option>
+    <option value="Queen of Pentacles">Queen of Pentacles</option>
+    <option value="King of Pentacles">King of Pentacles</option>
+    </select>
+    <div class="card-label-checkbox">
+        <label class="reversed-card-label" for="reversed-card1" id="label">Reverse Card:</label>
+        <input type="checkbox" id="reversed-card1" placeholder="reversed">
+    </div>
+    
+
+    <label for="tarot-card-2">Tarot Card2:</label>
+    <select id="tarot-card-2">
+    <option value="">---</option>
+    <option value="the-fool">The Fool</option>
+    <option value="the-magician">The Magician</option>
+    <option value="the-high-priestess">The High Priestess</option>
+    <option value="The Empress">The Empress</option>
+    <option value="The Emperor">The Emperor</option>
+    <option value="The Hierophant">The Hierophant</option>
+    <option value="The Lovers">The Lovers</option>
+    <option value="The Chariot">The Chariot</option>
+    <option value="Strength">Strength</option>
+    <option value="The Hermit">The Hermit</option>
+    <option value="The Wheel of Fortune ">The Wheel of Fortune </option>
+    <option value="Justice">Justice</option>
+    <option value="The Hanged Man">The Hanged Man</option>
+    <option value="Death">Death</option>
+    <option value="Temperance">Temperance</option>
+    <option value="The Devil">The Devil</option>
+    <option value="The Tower">The Tower</option>
+    <option value="The Star">The Star</option>
+    <option value="The Moon">The Moon</option>
+    <option value="The Sun">The Sun</option>
+    <option value="Judgement">Judgement</option>
+    <option value="The World">The World</option>
+    <option value="Ace of Wands">Ace of Wands</option>
+    <option value="Two of Wands">Two of Wands</option>
+    <option value="Three of Wands">Three of Wands</option>
+    <option value="Four of Wands">Four of Wands</option>
+    <option value="Five of Wands">Five of Wands</option>
+    <option value="Six of Wands">Six of Wands</option>
+    <option value="Seven of Wands">Seven of Wands</option>
+    <option value="Eight of Wands">Eight of Wands</option>
+    <option value="Nine of Wands">Nine of Wands</option>
+    <option value="Ten of Wands">Ten of Wands</option>
+    <option value="Page of Wands">Page of Wands</option>
+    <option value="Knight of Wands">Knight of Wands</option>
+    <option value="Queen of Wands">Queen of Wands</option>
+    <option value="King of Wands">King of Wands</option>
+    <option value="Ace of Cups">Ace of Cups</option>
+    <option value="Two of Cups">Two of Cups</option>
+    <option value="Three of Cups">Three of Cups</option>
+    <option value="Four of Cups">Four of Cups</option>
+    <option value="Five of Cups">Five of Cups</option>
+    <option value="Six of Cups">Six of Cups</option>
+    <option value="Seven of Cups">Seven of Cups</option>
+    <option value="Eight of Cups">Eight of Cups</option>
+    <option value="Nine of Cups">Nine of Cups</option>
+    <option value="Ten of Cups">Ten of Cups</option>
+    <option value="Page of Cups">Page of Cups</option>
+    <option value="Knight of Cups">Knight of Cups</option>
+    <option value="Queen of Cups">Queen of Cups</option>
+    <option value="King of Cups">King of Cups</option>
+    <option value="Ace of Swords">Ace of Swords</option>
+    <option value="Two of Swords">Two of Swords</option>
+    <option value="Three of Swords">Three of Swords</option>
+    <option value="Four of Swords">Four of Swords</option>
+    <option value="Five of Swords">Five of Swords</option>
+    <option value="Six of Swords">Six of Swords</option>
+    <option value="Seven of Swords">Seven of Swords</option>
+    <option value="Eight of Swords">Eight of Swords</option>
+    <option value="Nine of Swords">Nine of Swords</option>
+    <option value="Ten of Swords">Ten of Swords</option>
+    <option value="Page of Swords">Page of Swords</option>
+    <option value="Knight of Swords">Knight of Swords</option>
+    <option value="Queen of Swords">Queen of Swords</option>
+    <option value="King of Swords">King of Swords</option>
+    <option value="Ace of Pentacles">Ace of Pentacles</option>
+    <option value="Two of Pentacles">Two of Pentacles</option>
+    <option value="Three of Pentacles">Three of Pentacles</option>
+    <option value="Four of Pentacles">Four of Pentacles</option>
+    <option value="Five of Pentacles">Five of Pentacles</option>
+    <option value="Six of Pentacles">Six of Pentacles</option>
+    <option value="Seven of Pentacles">Seven of Pentacles</option>
+    <option value="Eight of Pentacles">Eight of Pentacles</option>
+    <option value="Nine of Pentacles">Nine of Pentacles</option>
+    <option value="Ten of Pentacles">Ten of Pentacles</option>
+    <option value="Page of Pentacles">Page of Pentacles</option>
+    <option value="Knight of Pentacles">Knight of Pentacles</option>
+    <option value="Queen of Pentacles">Queen of Pentacles</option>
+    <option value="King of Pentacles">King of Pentacles</option>
+    </select>
+    <div class="card-label-checkbox">
+        <label class="reversed-card-label" for="reversed-card2" id="label">Reverse Card:</label>
+        <input type="checkbox" id="reversed-card2" placeholder="reversed">
+    </div>
+    
+    
+    <label for="tarot-card-3">Tarot Card3:</label>
+    <select id="tarot-card-3">
+    <option value="">---</option>
+    <option value="the-fool">The Fool</option>
+    <option value="the-magician">The Magician</option>
+    <option value="the-high-priestess">The High Priestess</option>
+    <option value="The Empress">The Empress</option>
+    <option value="The Emperor">The Emperor</option>
+    <option value="The Hierophant">The Hierophant</option>
+    <option value="The Lovers">The Lovers</option>
+    <option value="The Chariot">The Chariot</option>
+    <option value="Strength">Strength</option>
+    <option value="The Hermit">The Hermit</option>
+    <option value="The Wheel of Fortune ">The Wheel of Fortune </option>
+    <option value="Justice">Justice</option>
+    <option value="The Hanged Man">The Hanged Man</option>
+    <option value="Death">Death</option>
+    <option value="Temperance">Temperance</option>
+    <option value="The Devil">The Devil</option>
+    <option value="The Tower">The Tower</option>
+    <option value="The Star">The Star</option>
+    <option value="The Moon">The Moon</option>
+    <option value="The Sun">The Sun</option>
+    <option value="Judgement">Judgement</option>
+    <option value="The World">The World</option>
+    <option value="Ace of Wands">Ace of Wands</option>
+    <option value="Two of Wands">Two of Wands</option>
+    <option value="Three of Wands">Three of Wands</option>
+    <option value="Four of Wands">Four of Wands</option>
+    <option value="Five of Wands">Five of Wands</option>
+    <option value="Six of Wands">Six of Wands</option>
+    <option value="Seven of Wands">Seven of Wands</option>
+    <option value="Eight of Wands">Eight of Wands</option>
+    <option value="Nine of Wands">Nine of Wands</option>
+    <option value="Ten of Wands">Ten of Wands</option>
+    <option value="Page of Wands">Page of Wands</option>
+    <option value="Knight of Wands">Knight of Wands</option>
+    <option value="Queen of Wands">Queen of Wands</option>
+    <option value="King of Wands">King of Wands</option>
+    <option value="Ace of Cups">Ace of Cups</option>
+    <option value="Two of Cups">Two of Cups</option>
+    <option value="Three of Cups">Three of Cups</option>
+    <option value="Four of Cups">Four of Cups</option>
+    <option value="Five of Cups">Five of Cups</option>
+    <option value="Six of Cups">Six of Cups</option>
+    <option value="Seven of Cups">Seven of Cups</option>
+    <option value="Eight of Cups">Eight of Cups</option>
+    <option value="Nine of Cups">Nine of Cups</option>
+    <option value="Ten of Cups">Ten of Cups</option>
+    <option value="Page of Cups">Page of Cups</option>
+    <option value="Knight of Cups">Knight of Cups</option>
+    <option value="Queen of Cups">Queen of Cups</option>
+    <option value="King of Cups">King of Cups</option>
+    <option value="Ace of Swords">Ace of Swords</option>
+    <option value="Two of Swords">Two of Swords</option>
+    <option value="Three of Swords">Three of Swords</option>
+    <option value="Four of Swords">Four of Swords</option>
+    <option value="Five of Swords">Five of Swords</option>
+    <option value="Six of Swords">Six of Swords</option>
+    <option value="Seven of Swords">Seven of Swords</option>
+    <option value="Eight of Swords">Eight of Swords</option>
+    <option value="Nine of Swords">Nine of Swords</option>
+    <option value="Ten of Swords">Ten of Swords</option>
+    <option value="Page of Swords">Page of Swords</option>
+    <option value="Knight of Swords">Knight of Swords</option>
+    <option value="Queen of Swords">Queen of Swords</option>
+    <option value="King of Swords">King of Swords</option>
+    <option value="Ace of Pentacles">Ace of Pentacles</option>
+    <option value="Two of Pentacles">Two of Pentacles</option>
+    <option value="Three of Pentacles">Three of Pentacles</option>
+    <option value="Four of Pentacles">Four of Pentacles</option>
+    <option value="Five of Pentacles">Five of Pentacles</option>
+    <option value="Six of Pentacles">Six of Pentacles</option>
+    <option value="Seven of Pentacles">Seven of Pentacles</option>
+    <option value="Eight of Pentacles">Eight of Pentacles</option>
+    <option value="Nine of Pentacles">Nine of Pentacles</option>
+    <option value="Ten of Pentacles">Ten of Pentacles</option>
+    <option value="Page of Pentacles">Page of Pentacles</option>
+    <option value="Knight of Pentacles">Knight of Pentacles</option>
+    <option value="Queen of Pentacles">Queen of Pentacles</option>
+    <option value="King of Pentacles">King of Pentacles</option>
+    </select>
+    <div class="card-label-checkbox">
+        <label class="reversed-card-label" for="reversed-card3" id="label">Reverse Card:</label>
+        <input type="checkbox" id="reversed-card3" placeholder="reversed">
+    </div>
+    
+      <button id="send-button">Get Reading</button>
+    </div>
+    <div id="response-display"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
